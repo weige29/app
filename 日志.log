@@ -1,0 +1,3 @@
+[2025-08-11 16:00:41] [音频] 回退到虚拟线设备: CABLE Output (VB-Audio Virtual  (index=4)
+[2025-08-11 16:00:42] [音频] 音频回调流已启动: index=4, channels=2, wasapi_extra_used=False
+[2025-08-11 16:01:13] [系统] 音频监测线程已结束: K3-1 (2- HD Audio Driver for Display Audio)
