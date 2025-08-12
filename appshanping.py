@@ -427,6 +427,12 @@ def show_camera_feed():
     last_art = 0
     alert_start = 0
     alert_img = None
+    # 抖动检测（改良版）状态与参数
+    JITTER_WINDOW_SEC = 1.0        # 在过去 1 秒内统计抖动次数
+    JITTER_MIN_COUNT = 2          # 窗口内至少出现多少次判为抖动（可调）
+    JITTER_DISP_TH = 0.5          # detect_jitter_orb 的位移阈值，减小可提高灵敏度（示例 0.5 -> 0.3）
+    JITTER_PCT_TH = 0.01          # detect_jitter_orb 的匹配比例阈值（示例 0.01 -> 1%）
+    jitter_times = deque()        # 存存检测到抖动的时间戳
 
     # 先播放监控音
     play_audio()
